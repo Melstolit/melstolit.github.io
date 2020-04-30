@@ -1,172 +1,26 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EmberQuickstart</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<head>
-	<title>Scatter Chart</title>
-	<script src="js/chart.js"></script>
-	<script src="js/utils.js"></script>
-	<style>
-	canvas {
-		-moz-user-select: none;
-		-webkit-user-select: none;
-		-ms-user-select: none;
-	}
-	</style>
-</head>
+    
+<meta name="ember-quickstart/config/environment" content="%7B%22modulePrefix%22%3A%22ember-quickstart%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22auto%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22name%22%3A%22ember-quickstart%22%2C%22version%22%3A%220.0.0%2B945cc341%22%7D%2C%22exportApplicationGlobal%22%3Afalse%7D" />
 
-<body>
-	<div style="width:75%">
-		<canvas id="canvas"></canvas>
-	</div>
-	<script>
-	var color = Chart.helpers.color;
-	var scatterChartData = {
-		datasets: [{
-			borderColor: window.chartColors.red,
-			backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
-			label: 'V(node2)',
-			data: [{
-				x: 1,
-				y: -1.711e-2,
-			}, {
-				x: 1.26,
-				y: -2.708e-2,
-			}, {
-				x: 1.58,
-				y: -4.285e-2,
-			}, {
-				x: 2.0,
-				y: -6.772e-2,
-			}, {
-				x: 2.51,
-				y: -1.068e-1,
-			}, {
-				x: 3.16,
-				y: -1.681e-1,
-			}, {
-				x: 3.98,
-				y: -2.635e-1,
-			}, {
-				x: 5.01,
-				y: -4.106e-1,
-			}, {
-				x: 6.31,
-				y: -6.339e-1,
-			}, {
-				x: 7.94,
-				y: -9.659e-1,
-			}, {
-				x: 10.00,
-				y: -1.445,
-			}, {
-				x: 12.6,
-				y: -2.110,
-			}, {
-				x: 15.8,
-				y: -2.992,
-			}, {
-				x: 20.0,
-				y: -4.102,
-			}, {
-				x: 25.1,
-				y: -5.429,
-			}, {
-				x: 31.6,
-				y: -6.944,
-			}, {
-				x: 39.8,
-				y: -8.607,
-			}, {
-				x: 50.1,
-				y: -1.038e1,
-			}, {
-				x: 63.1,
-				y: -1.223e1,
-			}, {
-				x: 79.4,
-				y: -1.413e1,
-			}, {
-				x: 100.00,
-				y: -1.607e1,
-			}, {
-				x: 126,
-				y: -1.803e1,
-			}, {
-				x: 158,
-				y: -2e1,
-			}, {
-				x: 200,
-				y: -2.199e1,
-			}, {
-				x: 251,
-				y: -2.398e1,
-			}, {
-				x: 316,
-				y: -2.597e1,
-			}, {
-				x: 398,
-				y: -2.797e1,
-			}, {
-				x: 501,
-				y: -2.996e1,
-			}, {
-				x: 631,
-				y: -3.196e1,
-			}, {
-				x: 794,
-				y: -3.396e1,
-			}, {
-				x: 1000,
-				y: -3.596e1,
-			}]
-		}]
-	};
+    <link integrity="" rel="stylesheet" href="/assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css">
+    <link integrity="" rel="stylesheet" href="/assets/ember-quickstart-d41d8cd98f00b204e9800998ecf8427e.css">
 
-	window.onload = function() {
-		var ctx = document.getElementById('canvas').getContext('2d');
-		window.myScatter = Chart.Scatter(ctx, {
-			data: scatterChartData,
-			options: {
-				title: {
-					display: true,
-					text: 'Chart.js Scatter Chart - Logarithmic X-Axis'
-				},
-				scales: {
-					xAxes: [{
-						type: 'logarithmic',
-						position: 'bottom',
-						ticks: {
-							userCallback: function(tick) {
-								var remain = tick / (Math.pow(10, Math.floor(Chart.helpers.log10(tick))));
-								if (remain === 1 || remain === 2 || remain === 5) {
-									return tick.toString() + 'Hz';
-								}
-								return '';
-							},
-						},
-						scaleLabel: {
-							labelString: 'Frequency',
-							display: true,
-						}
-					}],
-					yAxes: [{
-						type: 'linear',
-						ticks: {
-							userCallback: function(tick) {
-								return tick.toString() + 'dB';
-							}
-						},
-						scaleLabel: {
-							labelString: 'Voltage',
-							display: true
-						}
-					}]
-				}
-			}
-		});
-	};
-	</script>
-</body>
+    
+  </head>
+  <body>
+    
 
+    <script src="/assets/vendor-e0dad2971425b4b1929a982044ab4731.js" integrity="sha256-zWBFNTgoDodTePmZiXpe78nM2NFfnVWBWP98UhWJPvE= sha512-lCBmRQgUiijf8uw7kbQ5Rok5xsDPjm2DX55mMQXho90kDTfOH6IJ3T7NiwRsKlmzKl10uA9TMtkqlSv8M4jksw==" ></script>
+    <script src="/assets/ember-quickstart-e78c8dc77269d777ce29ea2605c6c224.js" integrity="sha256-GsGYFcR27L3j7KWb6wRKNLs2b73HkkoDv9WrnYOKQl0= sha512-wEBKd6pWfwQwiXsjgjNk73ojanZkh4PxtARQMV0RvCop0ptuBPP5vLenddgLIpvvCec2jdICQaLUhAzFs2sEYA==" ></script>
+
+    
+  </body>
 </html>
