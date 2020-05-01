@@ -1,0 +1,22 @@
+{
+  "name": "melstolit.github.io",
+  "version": "0.1.0",
+  "description": "Github's Pages test",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Melstolit/melstolit.github.io.git"
+  },
+  "author": "melstolit",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Melstolit/melstolit.github.io/issues"
+  },
+  "homepage": "https://github.com/Melstolit/melstolit.github.io#readme",
+  "dependencies": {
+    "hexo-cli": "^3.1.0"
+  }
+}
