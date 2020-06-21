@@ -12,14 +12,25 @@
       <li><a href="https://www.microsoft.com/en-us/quantum/development-kit" target="_blank" rel="noopener">MS QDK</a></li>
       <li><a href="https://cirq.readthedocs.io/en/stable/" target="_blank" rel="noopener">Cirq</a></li>
     </ul>
+    <div>
+      <ChartView msg="ChartJs demo"/>
+    </div>
+    <div>
+      
+    </div>
   </div>
 </template>
 
 <script>
+import ChartView from './ChartView.vue'
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  components: {
+    ChartView
   }
 }
 </script>
