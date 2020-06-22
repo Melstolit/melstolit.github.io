@@ -1,16 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Melstolit GH Page"/>
+    <b-container class="bv-example-row">
+      <b-row>
+        <b-col sm="10" offset="1">
+          <NavigationPanel />
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col sm="10" offset="1">
+          <router-view />
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavigationPanel from './components/NavigationPanel'
+
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    NavigationPanel
   }
 }
 </script>
