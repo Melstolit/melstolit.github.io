@@ -17,15 +17,15 @@ import planetChartData from '../data/chart-data.js';
       return {
         datacollection: planetChartData.data
       }
-    }/*,
+    /*},
     mounted () {
       this.fillData()
     },
     methods: {
       fillData () {
         this.datacollection = planetChartData.data
-      }
-    }*/
+      }*/
+    }
   }
 </script>
 

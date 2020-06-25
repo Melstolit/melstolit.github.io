@@ -1,23 +1,21 @@
 <template>
   <div>
-    <ChartPanel msg="ChartJs demo"/>
+    <CollectionPanel msg="ChartJs demo"/>
   </div>
 </template>
 
 <script>
-import ChartPanel from '../components/ChartPanel'
-
+import CollectionPanel from '../components/CollectionPanel'
 export default {
-    name: 'ChartView',
+    name: 'Chart',
     props: {
       msg: String
     },
     components: {
-      ChartPanel
+      CollectionPanel
     }
 }
 </script>
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

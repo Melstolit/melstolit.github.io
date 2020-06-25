@@ -2,7 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Main from './views/Main'
-import ChartView from './views/ChartView'
+import Chart from './views/Chart'
+import About from './views/About'
 
 Vue.use(Router)
 
@@ -17,8 +18,13 @@ export default new Router({
         },
         {
             path: '/Chart',
-            name: 'ChartView',
-            component: ChartView
+            name: 'chart',
+            component: Chart
+        },
+        {
+            path: '/About',
+            name: 'about',
+            component: About
         }
     ]
 })
